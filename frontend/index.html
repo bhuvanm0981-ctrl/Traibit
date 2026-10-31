@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trailbit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+  <header class="header">
+    <h1>Trailbit</h1>
+    <p class="tagline">Your first open‑source contribution starts here.</p>
+    <button id="cta-start">Get Started</button>
+  </header>
+
+  <main class="main" id="main-content" style="display:none;">
+    <section class="discover">
+      <h2>Discover Issues</h2>
+      <form id="discover-form">
+        <label>Language
+          <select multiple name="language">
+            <option>Python</option>
+            <option>JavaScript</option>
+            <option>TypeScript</option>
+            <option>Java</option>
+            <option>C++</option>
+            <option>Go</option>
+            <option>Rust</option>
+          </select>
+        </label>
+        <label>Topic
+          <select multiple name="topic">
+            <option>Web Development</option>
+            <option>AI/ML</option>
+            <option>Cybersecurity</option>
+            <option>Backend</option>
+            <option>Frontend</option>
+            <option>DevTools</option>
+          </select>
+        </label>
+        <label>Experience
+          <select name="experience">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </label>
+        <label>Keywords (optional)
+          <input type="text" name="keywords" placeholder="e.g. authentication" />
+        </label>
+        <button type="submit">Search Issues</button>
+      </form>
+      <div id="loading" class="hidden">Searching…</div>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
