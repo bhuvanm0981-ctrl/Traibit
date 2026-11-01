@@ -229,7 +229,7 @@ def discover_issues(
 
     queries = [
         f"GitHub {language_text} {topic_text} beginner open source issues",
-        f'site:github.com/*/*/issues {language_text} "good first issue"',
+        f'site:github.com/*/*/issues/ {language_text} beginner good first issue open',
         f"GitHub repositories {language_text} issues labeled good first issue",
         f"{language_text} beginner-friendly open source GitHub issues {keyword_text}"
     ]

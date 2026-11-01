@@ -1,59 +1,291 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Trailbit</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Discover beginner-friendly open-source issues and start contributing with Trailbit.">
+
+    <title>Trailbit — Your Open Source Journey Starts Here</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark">
-  <header class="header">
-    <h1>Trailbit</h1>
-    <p class="tagline">Your first open‑source contribution starts here.</p>
-    <button id="cta-start">Get Started</button>
-  </header>
 
-  <main class="main" id="main-content" style="display:none;">
-    <section class="discover">
-      <h2>Discover Issues</h2>
-      <form id="discover-form">
-        <label>Language
-          <select multiple name="language">
-            <option>Python</option>
-            <option>JavaScript</option>
-            <option>TypeScript</option>
-            <option>Java</option>
-            <option>C++</option>
-            <option>Go</option>
-            <option>Rust</option>
-          </select>
-        </label>
-        <label>Topic
-          <select multiple name="topic">
-            <option>Web Development</option>
-            <option>AI/ML</option>
-            <option>Cybersecurity</option>
-            <option>Backend</option>
-            <option>Frontend</option>
-            <option>DevTools</option>
-          </select>
-        </label>
-        <label>Experience
-          <select name="experience">
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-          </select>
-        </label>
-        <label>Keywords (optional)
-          <input type="text" name="keywords" placeholder="e.g. authentication" />
-        </label>
-        <button type="submit">Search Issues</button>
-      </form>
-      <div id="loading" class="hidden">Searching…</div>
-      <div id="results" class="results"></div>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">T</span>
+            <span>trailbit<span class="brand-dot">.</span></span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#discover-section">Discover</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="https://github.com/bhuvanm0981-ctrl/Traibit"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </div>
+
+        <button class="nav-cta" id="cta-start" type="button">
+            Start exploring <span>→</span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-glow"></div>
+
+        <div class="hero-content">
+            <div class="eyebrow">
+                <span class="status-dot"></span>
+                YOUR OPEN SOURCE JOURNEY STARTS HERE
+            </div>
+
+            <h1>
+                Don't just explore code.<br>
+                <span>Become part of it.</span>
+            </h1>
+
+            <p class="hero-description">
+                Find real open-source issues that match your skills.
+                Understand what needs to be done. Make your first contribution
+                with confidence.
+            </p>
+
+            <div class="hero-actions">
+                <button class="primary-button" id="hero-start" type="button">
+                    Find my first issue <span>→</span>
+                </button>
+
+                <a href="#how-it-works" class="secondary-button">
+                    See how it works
+                </a>
+            </div>
+
+            <div class="hero-note">
+                <span>✦</span> Built for developers at every experience level
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="visual-card visual-card-main">
+                <div class="visual-card-top">
+                    <span class="visual-label">CONTRIBUTION OPPORTUNITY</span>
+                    <span class="visual-live">● LIVE</span>
+                </div>
+
+                <div class="visual-repo">
+                    <span class="repo-icon">⌘</span>
+                    <span>open-source / project</span>
+                </div>
+
+                <h3>Help improve documentation</h3>
+
+                <div class="visual-tags">
+                    <span>Good first issue</span>
+                    <span>Python</span>
+                </div>
+
+                <div class="visual-divider"></div>
+
+                <div class="visual-bottom">
+                    <span>Difficulty</span>
+                    <strong>Beginner friendly</strong>
+                </div>
+            </div>
+
+            <div class="floating-badge badge-one">
+                <span>✦</span> Find your path
+            </div>
+
+            <div class="floating-badge badge-two">
+                <span>✓</span> Start contributing
+            </div>
+        </div>
+    </header>
+
+    <!-- Main application -->
+    <main class="main" id="main-content" style="display:none;">
+
+        <section class="discover-section" id="discover-section">
+
+            <div class="section-heading">
+                <div>
+                    <div class="section-eyebrow">OPPORTUNITY FINDER</div>
+                    <h2>Find your next contribution.</h2>
+                    <p>Tell us what you know. We'll help you find where to start.</p>
+                </div>
+
+                <div class="powered-by">
+                    <span class="status-dot"></span>
+                    Powered by TinyFish
+                </div>
+            </div>
+
+            <!-- Search form -->
+            <form id="discover-form" class="search-panel">
+
+                <div class="form-heading">
+                    <div class="form-heading-icon">⌕</div>
+                    <div>
+                        <h3>Personalize your search</h3>
+                        <p>Choose your skills and interests.</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+
+                    <label class="form-field">
+                        <span class="field-label">Programming language</span>
+                        <span class="field-hint">Select one or more</span>
+
+                        <select multiple name="language" size="4">
+                            <option>Python</option>
+                            <option>JavaScript</option>
+                            <option>TypeScript</option>
+                            <option>Java</option>
+                            <option>C++</option>
+                            <option>Go</option>
+                            <option>Rust</option>
+                        </select>
+                    </label>
+
+                    <label class="form-field">
+                        <span class="field-label">Area of interest</span>
+                        <span class="field-hint">Select one or more</span>
+
+                        <select multiple name="topic" size="4">
+                            <option>Web Development</option>
+                            <option>AI/ML</option>
+                            <option>Cybersecurity</option>
+                            <option>Backend</option>
+                            <option>Frontend</option>
+                            <option>DevTools</option>
+                        </select>
+                    </label>
+
+                    <label class="form-field">
+                        <span class="field-label">Your experience</span>
+                        <span class="field-hint">Choose your current level</span>
+
+                        <select name="experience">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                    </label>
+
+                    <label class="form-field">
+                        <span class="field-label">What do you want to work on?</span>
+                        <span class="field-hint">Optional keywords</span>
+
+                        <input
+                            type="text"
+                            name="keywords"
+                            placeholder="e.g. authentication, APIs, documentation"
+                        >
+                    </label>
+
+                </div>
+
+                <div class="search-footer">
+                    <p><span>✦</span> We'll look for relevant GitHub opportunities.</p>
+
+                    <button class="primary-button search-button" type="submit">
+                        Discover issues <span>→</span>
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- Loading state -->
+            <div id="loading" class="loading-state hidden" aria-live="polite">
+                <div class="loader"></div>
+                <h3>Finding opportunities...</h3>
+                <p>Searching for issues that match your interests.</p>
+            </div>
+
+            <!-- Results -->
+            <section class="results-section" aria-live="polite">
+                <div id="results" class="results"></div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- How it works -->
+    <section class="how-section" id="how-it-works">
+
+        <div class="section-eyebrow">SIMPLE BY DESIGN</div>
+        <h2>Your first contribution, made easier.</h2>
+        <p class="how-description">
+            From finding an issue to understanding how to solve it.
+        </p>
+
+        <div class="steps-grid">
+
+            <article class="how-card">
+                <div class="step-number">01</div>
+                <div class="step-icon">⌕</div>
+                <h3>Discover</h3>
+                <p>Find open-source issues based on your skills, interests and experience.</p>
+            </article>
+
+            <article class="how-card">
+                <div class="step-number">02</div>
+                <div class="step-icon">✓</div>
+                <h3>Verify</h3>
+                <p>Check issue status, assignments and linked pull requests before you begin.</p>
+            </article>
+
+            <article class="how-card">
+                <div class="step-number">03</div>
+                <div class="step-icon">↗</div>
+                <h3>Contribute</h3>
+                <p>Get a step-by-step roadmap to understand the issue and start working.</p>
+            </article>
+
+        </div>
+
     </section>
-  </main>
 
-  <script src="app.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#" class="brand">
+            <span class="brand-icon">T</span>
+            <span>trailbit<span class="brand-dot">.</span></span>
+        </a>
+
+        <p>Your first open-source contribution starts here.</p>
+
+        <a href="https://github.com/bhuvanm0981-ctrl/Traibit"
+           target="_blank"
+           rel="noopener noreferrer">
+            Built for the open-source community ↗
+        </a>
+    </footer>
+
+    <script src="app.js"></script>
+
+    <!-- Hero button uses the existing discovery CTA -->
+    <script>
+        document.getElementById("hero-start").addEventListener("click", () => {
+            document.getElementById("cta-start").click();
+            document.getElementById("discover-section").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+    </script>
+
 </body>
 </html>
